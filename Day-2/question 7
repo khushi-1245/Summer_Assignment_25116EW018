@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    long long prod = 1;
+    printf("Enter number: ");
+    scanf("%d", &n);
+    int temp = (n < 0) ? -n : n;
+    while (temp != 0) { prod *= temp % 10; temp /= 10; }
+    printf("Product of digits = %lld\n", prod);
+    return 0;
+}
